@@ -1,4 +1,5 @@
 import 'package:e_commerce/UI/homeoage.dart';
+import 'package:e_commerce/UI/my_card.dart';
 import 'package:e_commerce/UI/splash.dart';
 import 'package:e_commerce/UI/welcame.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Welcame());
+      home: MyCard());
 
        
   }

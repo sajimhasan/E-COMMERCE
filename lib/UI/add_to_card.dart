@@ -34,18 +34,31 @@ class AddToCard extends StatelessWidget {
                    ],
                  ),
                  SizedBox(height: 10,),
-                 Row(
-                  children: [
-                    Icon(Icons.star,color: Color(0xFFFCBF0C),)//this row has some work and the add somwthing.. some this work this after the carent
-                  ],
-                 ),
+                 SizedBox(
+                  height: 50,
+                  width: double.infinity,
+                  child: retingBulider(5)),
                  SizedBox(height: 13,),
-                 Row(
-                  children: [
-                    Text('45,000 '),//this row has some work and the add somwthing.. some this work this after the carent
+                Row(
+  children: [
+    SizedBox(width: 5,),
+    Image.asset("image/4.png"), // <- Space সমস্যা সমাধান
+    SizedBox(width: 2,),
+    Text('45,000 ',style: TextStyle(
+      fontSize: 16, color: Colors.black, fontWeight: FontWeight.w800
+    ),),
+    SizedBox(width: 7,),
+    Image.asset("image/23.png"), // <- Space সমস্যা সমাধান
+    SizedBox(width: 2,),
+    Text('45,000 ',style: TextStyle(
+      fontSize: 11.48, color: Colors.grey, fontWeight: FontWeight.w800,decoration: TextDecoration.lineThrough
+    ),
+  ),
+  SizedBox(width: 120,),
 
-                  ],
-                 ),
+  Text("Available in stock ",style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600,),textAlign: TextAlign.right,)
+  ],
+),
                  SizedBox(height: 20,),
                  Row(
                   
@@ -53,7 +66,27 @@ class AddToCard extends StatelessWidget {
                      Text('About ',style: Allstyle.title.copyWith(fontSize: 16,fontWeight: FontWeight.bold),),
                    ],
                  ),
-                 Text('The upgraded S6 SiP runs up to 20 percent faster, allowing apps to also launch 20 percent faster, while maintaining the same all-day 18-hour battery life.')
+                 Text('The upgraded S6 SiP runs up to 20 percent faster, allowing apps to also launch 20 percent faster, while maintaining the same all-day 18-hour battery life.',style: Allstyle.subtitle.copyWith(fontWeight: FontWeight.w400,fontSize: 15),),
+                 SizedBox(height: 16,),
+                 Text(
+              "Select Size",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 8),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [35, 36, 37, 38, 39, 40].map((size) {
+                return ChoiceChip(
+                  label: Text("$size"),
+                  selected: size == 37,
+                  onSelected: (bool selected) {},
+                  selectedColor: Colors.blue,
+                  labelStyle: TextStyle(color: Colors.white),
+                );
+              }).toList(),
+            ),
+
+
                ],
              ),
            ),
@@ -63,4 +96,15 @@ class AddToCard extends StatelessWidget {
       ),
     );
   }
+  Widget retingBulider(int retaing){
+  return ListView.builder(
+    scrollDirection: Axis.horizontal,
+    itemCount: retaing,
+    itemBuilder: (context, Index){
+      return Icon(Icons.star,color: Color(0xFFFCBF0C),);
+    }
+  );
 }
+
+}
+

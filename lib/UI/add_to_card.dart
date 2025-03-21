@@ -42,13 +42,13 @@ class AddToCard extends StatelessWidget {
                 Row(
   children: [
     SizedBox(width: 5,),
-    Image.asset("image/4.png"), // <- Space সমস্যা সমাধান
+    Image.asset("image/4.png"), 
     SizedBox(width: 2,),
     Text('45,000 ',style: TextStyle(
       fontSize: 16, color: Colors.black, fontWeight: FontWeight.w800
     ),),
     SizedBox(width: 7,),
-    Image.asset("image/23.png"), // <- Space সমস্যা সমাধান
+    Image.asset("image/23.png"), 
     SizedBox(width: 2,),
     Text('45,000 ',style: TextStyle(
       fontSize: 11.48, color: Colors.grey, fontWeight: FontWeight.w800,decoration: TextDecoration.lineThrough

@@ -1,5 +1,4 @@
 import 'package:e_commerce/const/allcolor.dart';
-import 'package:e_commerce/const/allstyle.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {

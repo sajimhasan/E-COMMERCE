@@ -3,7 +3,6 @@ import 'package:e_commerce/const/allcolor.dart';
 import 'package:e_commerce/const/allstyle.dart';
 import 'package:e_commerce/until/custombutton.dart';
 import 'package:flutter/material.dart';
-import 'package:e_commerce/const/allcolor.dart';
 
 
 class Welcame extends StatelessWidget {
